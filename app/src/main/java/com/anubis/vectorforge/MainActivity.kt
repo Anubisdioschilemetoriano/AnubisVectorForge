@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import com.anubis.vectorforge.ui.screen.TodoListScreen
 import com.anubis.vectorforge.ui.theme.AnubisVectorForgeTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -20,18 +21,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    // Aquí irá la pantalla principal
-                    Greeting("Anubis Vector Forge")
+                    TodoListScreen()
                 }
             }
         }
     }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
 }
